@@ -22,3 +22,5 @@ The code is organized into separate folders for the client and server, with each
 
 # Frontend running on port 3000
 # Backend running on port 3001
+
+
