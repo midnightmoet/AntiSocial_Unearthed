@@ -1,6 +1,5 @@
 ## Basic files to be ignored by git
 node_modules
 .env
-package-lock.json
-package.json
+
 
