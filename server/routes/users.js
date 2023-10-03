@@ -11,6 +11,8 @@ const router = express.Router(); // create router
 // READ
 router.get('/:id', verifyToken, getUser); // get user
 router.get('/:id/friends', verifyToken, getUserFriends); // get user friends
-router.put('/:id/friends', verifyToken, addRemoveFriend); // add/remove friend
+
+// UPDATE
+router.patch('/:id/:friendId', verifyToken, addRemoveFriend); // add/remove friend
 
 export default router; // export router
