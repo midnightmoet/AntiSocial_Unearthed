@@ -20,5 +20,7 @@ The code is organized into separate folders for the client and server, with each
 - Start nodemon with by running "npx nodemon" in the terminal
 
 
-# Frontend running on port 3000
-# Backend running on port 3001
+- Frontend running on port 3000
+- Backend running on port 3001
+
+<!-- leaving comments within the code to aid in optional cloning for portfolio purposes.  Change things to make this your own as needed.  #ittakesavillage -->
