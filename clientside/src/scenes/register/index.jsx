@@ -1,10 +1,12 @@
-import React from "react";
+import React from 'react'
 
-const LoginPage = () => {
+const RegisterPage = () => {
   return (
     <div>
       <form action="">
-        <label htmlFor="">Username / Email </label>
+        <label htmlFor="">Email</label>
+        <input type="text"  />
+        <label htmlFor="">Username</label>
         <input
           type="text"
           name="username"
@@ -18,13 +20,20 @@ const LoginPage = () => {
           id="password"
           placeholder="Password"
         />
+        <label htmlFor="">Confirm Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Confirm Password"
+        />
         <input type="submit" value="Login" />
         <p>
-          Don't have an account? <a href="/register">Register here</a>
+          Have an account? <a href="/">Login here</a>
         </p>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default LoginPage;
+export default RegisterPage
