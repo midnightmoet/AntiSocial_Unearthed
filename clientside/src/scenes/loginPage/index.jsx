@@ -1,8 +1,9 @@
 import React from "react";
+import "./style.css";
 
 const LoginPage = () => {
   return (
-    <div>
+    <div className="login">
       <form action="">
         <label htmlFor="">Username / Email </label>
         <input
@@ -18,7 +19,7 @@ const LoginPage = () => {
           id="password"
           placeholder="Password"
         />
-        <input type="submit" value="Login" />
+        <input type="submit" value="Login" className="btn" />
         <p>
           Don't have an account? <a href="/register">Register here</a>
         </p>
