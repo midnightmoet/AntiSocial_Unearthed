@@ -1,9 +1,19 @@
-// Desc: This is the main entry point for the React app. It is the first component that is rendered to the DOM. It is the parent component of all other components. It is the root of the component tree. It is the root of the virtual DOM. It is the root of the React app.
+import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
+import HomePage from "scenes/homePage";
+import LoginPage from "scenes/loginPage";
+import ProfilePage from "scenes/profilePage";
 
 function App() {
   return (
     <div className="app">
-      <h1>App</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LoginPage />} /> />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/profile/:userId" element={<ProfilePage />} />
+          <Route path="/*" element={<Navigate to="/" />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
