@@ -20,7 +20,15 @@ The code is organized into separate folders for the client and server, with each
 - Start nodemon with by running "npx nodemon" in the terminal
 
 
-- Frontend running on port 3000
-- Backend running on port 3001
+## Frontend
+- Start with `npm start` in the clientside folder
+- Running on port 3000
+- Clientside was bootstrapped with create-react-app
+
+## Backend
+- Start with `npx nodemon` in the server folder
+- Benefits of nodemon: automatically restarts the server when changes are made and catches errors immediately in terminal
+- Running on port 3001
+- Server is built with Node.js and Express
 
 <!-- leaving comments within the code to aid in optional cloning for portfolio purposes.  Change things to make this your own as needed.  #ittakesavillage -->
