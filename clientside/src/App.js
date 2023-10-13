@@ -3,6 +3,7 @@ import HomePage from "./scenes/homePage";
 import LoginPage from "./scenes/loginPage";
 import ProfilePage from "./scenes/profilePage";
 import RegisterPage from "./scenes/register";
+import NotFound from "./scenes/NotFound/NotFound";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <Route path="/register" element={<RegisterPage />} /> 
           <Route path="/home" element={<HomePage />} />
           <Route path="/profile/:userId" element={<ProfilePage />} />
-          <Route path="/*" element={<Navigate to="/" />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div>

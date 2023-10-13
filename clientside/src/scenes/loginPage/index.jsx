@@ -20,8 +20,10 @@ const LoginPage = () => {
           placeholder="Password"
         />
         <input type="submit" value="Login" className="btn" />
-        <p>
-          Don't have an account? <a href="/register">Register here</a>
+        <p className="asIf">
+          Don't have an account? 
+          <br></br>
+          <a href="/register">Register here</a>
         </p>
       </form>
     </div>

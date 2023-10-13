@@ -28,9 +28,11 @@ const RegisterPage = () => {
           id="password"
           placeholder="Confirm Password"
         />
-        <input type="submit" value="Login" className='btn'/>
+        <input type="submit" value="Register" className='btn'/>
         <p>
-          Have an account? <a href="/">Login here</a>
+          Have an account? 
+          <br></br>
+          <a href="/">Login here</a>
         </p>
       </form>
     </div>
