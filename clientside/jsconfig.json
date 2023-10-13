@@ -1,8 +1,0 @@
-{
-    "compilerOptions": {
-        "baseUrl": "src"
-    },
-    "include": ["src"]
-}
-
-// This will allow you to import from src folder without using relative paths but instead use absolute paths
