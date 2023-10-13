@@ -11,17 +11,40 @@ export const authSlice = createSlice({
     name: "auth",
     initialState,
     reducers: {
-        setMode: (state, action) => {
-            state.mode = action.payload;
+        setMode: (state) => {
+            state.mode = state.mode === "light" ? "dark" : "light";
         },
-        setUser: (state, action) => {
-            state.user = action.payload;
+        setLogin: (state, action) => {
+            state.user = action.payload.user;
+            state.token = action.payload.token;
         },
-        setToken: (state, action) => {
-            state.token = action.payload;
+        setLogout: (state) => {
+            state.user = null;
+            state.token = null;
+        },
+        setFriend: (state, action) => {
+            if(state.user){
+                state.user.friends = action.payload.friends;
+            } else {
+                console.error("User friends non-existent :( ");
+            }
         },
         setPosts: (state, action) => {
-            state.posts = action.payload;
+            state.posts = action.payload.posts;
+        },
+        setPost : (state, action) => {
+            const updatedPosts = state.posts.map((post) => {
+                if(post._id === action.payload.post._id){
+                    return action.payload.post;
+                }
+            });
+            state.posts = updatedPosts;
         },
     }
 });
+
+export const { setMode, setLogin, setLogout, setFriend, setPosts, setPost } = authSlice.actions;
+
+export default authSlice.reducer; 
+
+// redux with toolkit is a bit different than redux without toolkit.  We have to export the actions and the reducer separately.  
