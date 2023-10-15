@@ -23,7 +23,7 @@ The code is organized into separate folders for the client and server, with each
 ## Frontend
 - Start with `npm start` in the clientside folder
 - Running on port 3000
-- Clientside was bootstrapped with create-react-app
+- Clientside was bootstrapped with create-react-app (I used 17.0.02 version)
 
 ## Backend
 - Start with `npx nodemon` in the server folder

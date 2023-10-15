@@ -3,28 +3,28 @@ import User from "../models/User.js";
 /* READ */
 export const getUser = async (req, res) => {
   try {
-    const { id } = req.params; // id is the user id
-    const user = await User.findById(id); // user is the user object
-    res.status(200).json(user); // send the user object back to the client
+    const { id } = req.params;
+    const user = await User.findById(id);
+    res.status(200).json(user);
   } catch (err) {
-    res.status(404).json({ message: err.message }); // if there is an error, send the error message back to the client
+    res.status(404).json({ message: err.message });
   }
 };
 
 export const getUserFriends = async (req, res) => {
   try {
-    const { id } = req.params; // id is the user id
-    const user = await User.findById(id); // user is the user object
+    const { id } = req.params;
+    const user = await User.findById(id);
 
     const friends = await Promise.all(
       user.friends.map((id) => User.findById(id))
-    ); // friends is an array of user objects
+    );
     const formattedFriends = friends.map(
       ({ _id, firstName, lastName, occupation, location, picturePath }) => {
         return { _id, firstName, lastName, occupation, location, picturePath };
       }
     );
-    res.status(200).json(formattedFriends); // send the user object back to the client
+    res.status(200).json(formattedFriends);
   } catch (err) {
     res.status(404).json({ message: err.message });
   }
