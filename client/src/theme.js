@@ -1,3 +1,5 @@
+// Play with color scheme when more is done
+
 // color design tokens export
 export const colorTokens = {
   grey: {
@@ -29,7 +31,7 @@ export const colorTokens = {
   },
 };
 
-// mui theme settings
+// mui theme settings; purpose is to set the color scheme
 export const themeSettings = (mode) => {
   return {
     palette: {

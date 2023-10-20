@@ -14,12 +14,12 @@ import {
   PERSIST,
   PURGE,
   REGISTER,
-} from "redux-persist";
+} from "redux-persist"; // redux-persist is used to persist our state across page refreshes
 import storage from "redux-persist/lib/storage";
 import { PersistGate } from "redux-persist/integration/react";
 
 
-// this is used to persist our state across page refreshes
+// this is used to persist our state across page refreshes; this code is taken from the redux-persist docs
 const persistConfig = { key: "root", storage, version: 1 };
 const persistedReducer = persistReducer(persistConfig, authReducer);
 const store = configureStore({
@@ -42,3 +42,5 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
+
+// Completed this code 10/19/2023
