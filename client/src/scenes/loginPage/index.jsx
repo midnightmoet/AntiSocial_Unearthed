@@ -1,3 +1,4 @@
+import Navbar from "scenes/navbar";
 
 
 const LoginPage = () => {
