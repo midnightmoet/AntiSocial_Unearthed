@@ -104,7 +104,27 @@ const Navbar = () => {
         </FormControl>
       </FlexBetween>
     ) : (
-      <IconButton></IconButton>
+      <IconButton
+        onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}
+      >
+        <Menu />
+      </IconButton>
+    )}
+
+    {/* Mobile Navigation */}
+    {!isNonMobileScreens && isMobileMenuToggled && (
+      <Box
+        position = "fixed"
+        right="0"
+        bottom="0"
+        height="100%"
+        zIndex="10"
+        maxWidth= "500px"
+        minWidth="300px"
+        backgroundColor={background}
+      >
+        {/* Close Icon */}
+      </Box>
     )}
   </FlexBetween>;
 };
