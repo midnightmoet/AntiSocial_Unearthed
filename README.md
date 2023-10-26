@@ -11,6 +11,7 @@ The code is organized into separate folders for the client and server, with each
 - Express
 - React.js
 - Node.js
+- Vite
 
 
 
@@ -21,8 +22,8 @@ The code is organized into separate folders for the client and server, with each
 
 
 ## Frontend
-- Start with `npm start` in the clientside folder
-- Running on port 3000
+- Start with `npm run dev` in the clientside folder
+- Running on port 5173
 - Clientside was bootstrapped with create-react-app (I used 17.0.02 version)
 
 ## Backend
