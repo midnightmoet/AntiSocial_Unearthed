@@ -24,7 +24,7 @@ The code is organized into separate folders for the client and server, with each
 ## Frontend
 - Start with `npm run dev` in the clientside folder
 - Running on port 5173
-- Clientside was bootstrapped with create-react-app (I used 17.0.02 version)
+- Clientside was bootstrapped with npm create vite@latest (I used 17.0.02 version of ReactJS)
 
 ## Backend
 - Start with `npx nodemon` in the server folder
