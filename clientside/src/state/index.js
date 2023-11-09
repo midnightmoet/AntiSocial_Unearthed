@@ -44,5 +44,7 @@ export const authSlice = createSlice({
 
 export const { setMode, setLogin, setLogout, setFriends, setPosts, setPost } = authSlice.actions;
 
+export default authSlice.reducer;
+
 
 // keeping it simple by setting the initial state and then setting the reducers with the actions within them.  There are the basic functions that are needed for this application in the simpliest state.
