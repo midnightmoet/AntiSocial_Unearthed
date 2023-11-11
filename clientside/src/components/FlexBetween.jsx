@@ -1,11 +1,13 @@
-import React from 'react'
+import { Box } from "@mui/material";
+import { styled } from "@mui/system";
 
-const FlexBetween = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+const FlexBetween = styled(Box)({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+});
 
-export default FlexBetween
+export default FlexBetween;
+
+// This component is used to align two elements horizontally with equal space between them.
+// This file is complete and does not need to be edited.
