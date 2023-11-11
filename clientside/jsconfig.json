@@ -1,8 +1,6 @@
 {
-    "compilerOptions": {
-        "baseUrl": "src"
-    },
-    "include": ["src"]
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "include": ["src"]
 }
-
-// when you import, import from the baseUrl
