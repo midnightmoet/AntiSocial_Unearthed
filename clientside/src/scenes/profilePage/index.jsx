@@ -1,11 +1,15 @@
-import React from 'react'
+import { Box } from "@mui/material";
+
+import Navbar from "scenes/navbar";
+
 
 const ProfilePage = () => {
-  return (
-    <div>
-      <h1>Profile Page</h1>
-    </div>
-  )
-}
 
-export default ProfilePage
+  return (
+    <Box>
+      <Navbar />
+    </Box>
+  );
+};
+
+export default ProfilePage;

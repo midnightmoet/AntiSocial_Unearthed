@@ -46,4 +46,4 @@ export const { setMode, setLogin, setLogout, setFriends, setPosts, setPost } =
   authSlice.actions;
 export default authSlice.reducer;
 
-// This file is complete and should not be changed
+// time shot 11/20/2023 13:20 est

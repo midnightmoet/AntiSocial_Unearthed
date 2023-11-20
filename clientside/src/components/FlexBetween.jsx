@@ -9,5 +9,5 @@ const FlexBetween = styled(Box)({
 
 export default FlexBetween;
 
-// This component is used to align two elements horizontally with equal space between them.
-// This file is complete and does not need to be edited.
+
+// Time stamp 11/20/2023 13:26 est
