@@ -104,3 +104,6 @@ export const themeSettings = (mode) => {
     },
   };
 };
+
+
+// STANDARD MUI THEME
