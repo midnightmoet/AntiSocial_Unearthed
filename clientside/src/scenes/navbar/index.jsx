@@ -15,12 +15,12 @@ import {
   Message,
   DarkMode,
   LightMode,
-  Notifications, 
+  Notifications,
   Help,
   Menu,
-  Close
+  Close,
 } from "@mui/icons-material";
-import { useDispatch, useSelector } from "react-redux"; 
+import { useDispatch, useSelector } from "react-redux";
 import { setMode, setLogout } from "state";
 import { useNavigate } from "react-router-dom";
 import FlexBetween from "components/FlexBetween";
@@ -36,15 +36,18 @@ const Navbar = () => {
   const theme = useTheme(); // for dark mode
   const neutralLight = theme.palette.neutral.light; // for light mode
   const dark = theme.palette.neutral.dark; // for dark mode
-  const background = theme.palette.background.default; 
+  const background = theme.palette.background.default;
   const primaryLight = theme.palette.primary.light; // for light mode
   const alt = theme.palette.background.alt; // for dark mode
 
   const fullName = `${user.firstName} ${user.lastName}`; // for user's full name
 
+  return;
+  <FlexBetween padding="1rem 6%" backgroundColor={alt}>
+    <FlexBetween gap="1.25rem">
 
-  return <div>Navbar</div>;
+    </FlexBetween>
+  </FlexBetween>;
 };
 
 export default Navbar;
-
