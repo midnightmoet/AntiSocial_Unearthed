@@ -73,7 +73,7 @@ const Navbar = () => {
         </FlexBetween>
       )}
     </FlexBetween>
-    {/* DESKTOP NAVIGATION, redux allows for dakr/light mode  */}
+    {/* DESKTOP NAVIGATION, redux allows for dark/light mode  */}
     {isNonMobileScreens ? (
       <FlexBetween gap="2rem">
         <IconButton onClick={() => dispatch(setMode())}>
@@ -86,6 +86,34 @@ const Navbar = () => {
         <Message sx={{fontSize: "25px"}}/>
         <Notifications sx={{fontSize: "25px"}}/>
         <Help sx={{fontSize: "25px"}}/>
+        <FormControl variant="standard" value={fullName}>
+            <Select
+              value={fullName}
+              sx={{
+                backgroundColor: neutralLight,
+                width: "150px",
+                borderRadius: "0.25rem",
+                padding: "0.25rem 1rem",
+                "& .MuiSvgIcon-root" : {
+                  paddingRight: "0.25rem",
+                  width: "3rem",
+                },
+                "& .MuiSelect-select:focus": {
+                  backgroundColor: neutralLight
+                }
+              }}
+              input={<InputBase />}
+              >
+                <MenuItem value={fullName}>
+                  <Typography>
+                    {fullName}
+                  </Typography>
+                </MenuItem>
+                <MenuItem onClick={() => dispatch(setLogout())}>
+                  Logout
+                </MenuItem>
+            </Select>
+        </FormControl>
       </FlexBetween>
     ) : (
       <IconButton></IconButton>
