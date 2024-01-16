@@ -18,7 +18,9 @@ The code is organized into separate folders for the client and server, with each
 ## To run the app: 
 - Navigate to the root directory and run "npm install" to install the dependencies, then run "npm run dev" to start the development server.
 
-- Start nodemon with by running "npx nodemon" in the terminal
+## To run the app concurrently:
+- `npm start` in the root directory
+- More about concurrently: https://www.npmjs.com/package/concurrently
 
 
 ## Frontend
@@ -31,5 +33,7 @@ The code is organized into separate folders for the client and server, with each
 - Benefits of nodemon: automatically restarts the server when changes are made and catches errors immediately in terminal
 - Running on port 3001
 - Server is built with Node.js and Express
+
+
 
 <!-- leaving comments within the code to aid in optional cloning for portfolio purposes.  Change things to make this your own as needed.  #ittakesavillage -->
