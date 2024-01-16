@@ -44,9 +44,52 @@ const Navbar = () => {
 
   return;
   <FlexBetween padding="1rem 6%" backgroundColor={alt}>
-    <FlexBetween gap="1.25rem">
-
+    <FlexBetween gap="1.75rem">
+      <Typography
+        fontWeight="bold"
+        fontSize="clamp(1rem, 2rem, 2.25rem)"
+        color="primary"
+        onClick={() => navigate("/")}
+        sx={{
+          "&:hover": {
+            color: primaryLight,
+            cursor: "pointer",
+          },
+        }}
+      >
+        AntiSocial
+      </Typography>
+      {isNonMobileScreens && (
+        <FlexBetween
+          backgroundColor={neutralLight}
+          borderRadius="9px"
+          gap="3rem"
+          padding="0.1rem 1.5rem"
+        >
+          <InputBase placeholder="Search..." />
+          <IconButton>
+            <Search />
+          </IconButton>
+        </FlexBetween>
+      )}
     </FlexBetween>
+    {/* DESKTOP NAVIGATION, redux allows for dakr/light mode  */}
+    {isNonMobileScreens ? (
+      <FlexBetween gap="2rem">
+        <IconButton onClick={() => dispatch(setMode())}>
+          {theme.palette.mode === "dark" ? (
+            <DarkMode sx={{fontSize: "25px"}}/>
+          ) : (
+            <LightMode sx={{fontSize: "25px", color: dark}}/>
+          )}
+        </IconButton>
+        <Message sx={{fontSize: "25px"}}/>
+        <Notifications sx={{fontSize: "25px"}}/>
+        <Help sx={{fontSize: "25px"}}/>
+      </FlexBetween>
+    ) : (
+      <IconButton></IconButton>
+    )}
   </FlexBetween>;
 };
 
